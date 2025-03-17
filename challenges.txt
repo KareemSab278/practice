@@ -1,0 +1,227 @@
+Coding Challenges for Understanding Stacks, Queues, Sliding Window, Prefix Sum, HashMap, Set, and Two Pointer
+
+Instructions:
+- Solve each challenge without looking at hints or solutions.
+- Write test cases, including typical cases and edge cases (e.g., empty arrays, single elements, invalid inputs).
+- Explain your approach out loud or in writing, focusing on why the technique is appropriate.
+- After solving, consider optimizations and reflect on what you learned.
+- Practice regularly to internalize the concepts.
+
+---
+
+### 1. Stacks Challenges
+
+#### Challenge 1: Reverse a String Using a Stack
+- Question: Write a function that reverses a string using a stack. Push each character onto the stack, then pop them off to build the reversed string.
+- Example 1:
+  Input: "hello"
+  Output: "olleh"
+- Example 2:
+  Input: "abc"
+  Output: "cba"
+
+#### Challenge 2: Check for Balanced Parentheses
+- Question: Write a function that checks if a string containing only parentheses ('(' and ')') is balanced (i.e., every opening parenthesis has a matching closing parenthesis in the correct order).
+- Example 1:
+  Input: "()"
+  Output: true
+- Example 2:
+  Input: "(()"
+  Output: false
+
+#### Challenge 3: Implement a Stack with Push, Pop, and Peek
+- Question: Implement a stack class with three methods: push (add an element), pop (remove and return the top element), and peek (return the top element without removing it). If the stack is empty, pop and peek should return null.
+- Example 1:
+  Input: Operations - push(1), push(2), peek(), pop(), pop()
+  Output: null, null, 2, 2, 1
+- Example 2:
+  Input: Operations - push(5), peek(), pop(), peek()
+  Output: null, 5, 5, null
+
+---
+
+### 2. Queues Challenges
+
+#### Challenge 1: Implement a Queue with Enqueue and Dequeue
+- Question: Implement a queue class with two methods: enqueue (add an element to the back) and dequeue (remove and return the front element). If the queue is empty, dequeue should return null.
+- Example 1:
+  Input: Operations - enqueue(1), enqueue(2), dequeue(), dequeue()
+  Output: null, null, 1, 2
+- Example 2:
+  Input: Operations - enqueue(3), dequeue(), enqueue(4), dequeue()
+  Output: null, 3, null, 4
+
+#### Challenge 2: Print First N Numbers in Order
+- Question: Write a function that uses a queue to print the first n positive integers in ascending order (i.e., 1, 2, 3, ..., n).
+- Example 1:
+  Input: 5
+  Output: [1, 2, 3, 4, 5]
+- Example 2:
+  Input: 3
+  Output: [1, 2, 3]
+
+#### Challenge 3: Reverse First K Elements of a Queue
+- Question: Write a function that reverses the first k elements of a queue, leaving the remaining elements in their original order. Use a stack to help with the reversal.
+- Example 1:
+  Input: queue = [1, 2, 3, 4, 5], k = 3
+  Output: [3, 2, 1, 4, 5]
+- Example 2:
+  Input: queue = [1, 2, 3], k = 2
+  Output: [2, 1, 3]
+
+---
+
+### 3. Sliding Window Challenges
+
+#### Challenge 1: Find Maximum Sum of K Consecutive Elements
+- Question: Write a function that finds the maximum sum of k consecutive elements in an array.
+- Example 1:
+  Input: arr = [1, 2, 3, 4, 5], k = 3
+  Output: 12
+- Example 2:
+  Input: arr = [5, 2, 1, 0, 7], k = 2
+  Output: 7
+
+#### Challenge 2: Count Subarrays with Sum Equal to K
+- Question: Write a function that counts the number of subarrays (contiguous segments) in an array that sum to a given value k.
+- Example 1:
+  Input: arr = [1, 2, 3, -3, 1, 1], k = 3
+  Output: 3
+- Example 2:
+  Input: arr = [1, -1, 0], k = 0
+  Output: 2
+
+#### Challenge 3: Find Longest Substring with K Distinct Characters
+- Question: Write a function that finds the length of the longest substring in a string with exactly k distinct characters.
+- Example 1:
+  Input: s = "aabbcc", k = 2
+  Output: 4
+- Example 2:
+  Input: s = "abcde", k = 3
+  Output: 3
+
+---
+
+### 4. Prefix Sum Challenges
+
+#### Challenge 1: Calculate Running Sum of an Array
+- Question: Write a function that returns an array where each element is the sum of all previous elements in the input array, including the current element.
+- Example 1:
+  Input: [1, 2, 3, 4]
+  Output: [1, 3, 6, 10]
+- Example 2:
+  Input: [5, 10, 15]
+  Output: [5, 15, 30]
+
+#### Challenge 2: Find Sum of Elements Between Two Indices
+- Question: Write a function that finds the sum of elements in an array between two indices left and right (inclusive) using a prefix sum array.
+- Example 1:
+  Input: arr = [1, 2, 3, 4, 5], left = 1, right = 3
+  Output: 9
+- Example 2:
+  Input: arr = [2, 4, 6, 8], left = 0, right = 2
+  Output: 12
+
+#### Challenge 3: Count Subarrays with Sum Equal to Zero
+- Question: Write a function that counts the number of subarrays (contiguous segments) in an array that sum to zero using a prefix sum approach.
+- Example 1:
+  Input: [1, -1, 2, -2, 3, -3]
+  Output: 3
+- Example 2:
+  Input: [0, 0, 0]
+  Output: 6
+
+---
+
+### 5. HashMap Challenges
+
+#### Challenge 1: Count Frequency of Elements in an Array
+- Question: Write a function that counts the frequency of each element in an array and returns a hash map (object in JavaScript) with the elements as keys and their frequencies as values.
+- Example 1:
+  Input: [1, 2, 2, 3, 3, 3]
+  Output: {1: 1, 2: 2, 3: 3}
+- Example 2:
+  Input: [5, 5, 5, 2]
+  Output: {5: 3, 2: 1}
+
+#### Challenge 2: Find Two Numbers That Sum to a Target
+- Question: Write a function that finds two numbers in an array that sum to a given target and returns their indices. Assume there is exactly one solution.
+- Example 1:
+  Input: arr = [2, 7, 11, 15], target = 9
+  Output: [0, 1]
+- Example 2:
+  Input: arr = [3, 2, 4], target = 6
+  Output: [1, 2]
+
+#### Challenge 3: Check for Duplicate Elements
+- Question: Write a function that checks if an array contains any duplicate elements.
+- Example 1:
+  Input: [1, 2, 3, 4, 1]
+  Output: true
+- Example 2:
+  Input: [1, 2, 3, 4]
+  Output: false
+
+---
+
+### 6. Set Challenges
+
+#### Challenge 1: Remove Duplicates from an Array
+- Question: Write a function that removes duplicates from an array and returns an array of unique elements in any order.
+- Example 1:
+  Input: [1, 2, 2, 3, 3, 3]
+  Output: [1, 2, 3]
+- Example 2:
+  Input: [5, 5, 2, 2, 1]
+  Output: [5, 2, 1]
+
+#### Challenge 2: Check if All Elements Are Unique
+- Question: Write a function that checks if all elements in an array are unique (i.e., no duplicates).
+- Example 1:
+  Input: [1, 2, 3, 4]
+  Output: true
+- Example 2:
+  Input: [1, 2, 2, 3]
+  Output: false
+
+#### Challenge 3: Find Intersection of Two Arrays
+- Question: Write a function that finds the common elements (intersection) between two arrays and returns them in any order.
+- Example 1:
+  Input: arr1 = [1, 2, 3], arr2 = [2, 3, 4]
+  Output: [2, 3]
+- Example 2:
+  Input: arr1 = [1, 1, 2], arr2 = [1, 2, 2]
+  Output: [1, 2]
+
+---
+
+### 7. Two Pointer Challenges
+
+#### Challenge 1: Reverse an Array Using Two Pointers
+- Question: Write a function that reverses an array in place using two pointers.
+- Example 1:
+  Input: [1, 2, 3, 4, 5]
+  Output: [5, 4, 3, 2, 1]
+- Example 2:
+  Input: [1, 2]
+  Output: [2, 1]
+
+#### Challenge 2: Find Pair with Sum Equal to Target
+- Question: Write a function that finds two numbers in a sorted array that sum to a given target and returns their indices. Assume there is exactly one solution.
+- Example 1:
+  Input: arr = [1, 2, 3, 4, 5], target = 7
+  Output: [1, 3]
+- Example 2:
+  Input: arr = [2, 4, 6, 8], target = 10
+  Output: [0, 2]
+
+#### Challenge 3: Move Zeros to the End of an Array
+- Question: Write a function that moves all zeros in an array to the end, preserving the order of non-zero elements, using two pointers.
+- Example 1:
+  Input: [0, 1, 0, 3, 12]
+  Output: [1, 3, 12, 0, 0]
+- Example 2:
+  Input: [1, 0, 2, 0, 3]
+  Output: [1, 2, 3, 0, 0]
+
+---
