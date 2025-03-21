@@ -293,3 +293,93 @@ const subZero = (arr) =>{
 
 // console.log(subZero([1, -1, 2, -2, 3, -3]))
 // console.log(subZero([0,0,0]))
+
+//================================================================================================ HASHMAP
+
+// CHALLENGE 1: FREQUENCY OF ELEMS
+
+const freqElems = (arr) =>{
+    arr.sort((a,b)=>{a-b})
+    let count = 0
+    let hashmap  = new Map()
+
+    for (let i =0; i<arr.length; i++){
+        if(arr[i]=== arr[i-1]){
+            count++
+        }
+        if(arr[i]!= arr[i-1]){count=1}
+        hashmap.set(arr[i], count)
+    }
+    return hashmap
+}
+
+// console.log(freqElems([1, 2, 2, 3, 3, 3]))
+// console.log(freqElems([5,5,5,2]))
+
+// CHALLENGE 2: TWO SUM TO TARGET
+
+// const twoSum = (arr, target)=>{
+//     arr.sort((a,b)=>{a-b})
+//     let pisition = 0
+//     let hashmap  = new Map()
+//     let output = []
+
+//     for (let i =0; i<arr.length; i++){
+//         if(arr[i] === arr[i-1]){
+//             count = i
+//         }
+//         if(arr[i]!= arr[i-1]){count=i}
+//         hashmap.set(arr[i], count)
+//     }
+//     for(num in hashmap){
+//         if (num)
+//     }
+// }
+
+// console.log(twoSum([2, 7, 11, 15], 9))
+
+// challenge 3: check for duplicates
+
+const checkDuplicates = (arr) => {
+    arr.sort((a, b) => a - b);
+    let count = 1;
+    let hashmap = new Map();
+    let output = [];
+
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] === arr[i - 1]) {
+            count++;
+        } else {
+            count = 1;
+        }
+        hashmap.set(arr[i], count);
+    }
+
+    for (let [key, value] of hashmap) {
+        if (value >= 2) {
+            output.push(key);
+        }
+    }
+
+    return output;
+};
+
+// console.log(checkDuplicates([1, 2, 3, 4, 1, 2, 2]));
+// console.log(checkDuplicates([1, 2, 3, 4, 1, 2, 2, 4]));
+
+//================================================================================================
+
+// challenge 1: remove duplicates from arr
+
+
+const removeDuplicates = (arr) => {
+    let set = new Set();
+
+    for (i of arr){
+        set.add(i)
+    }
+    return set
+}
+// console.log(removeDuplicates([1,2,3,4,4,4,4,4]))
+
+// challenge 2: check all elems unique?
